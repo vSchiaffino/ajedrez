@@ -1,0 +1,7 @@
+colorama==0.4.1
+dispatcher==1.0
+pydispatch==1.1.0
+PyDispatcher==2.0.5
+pygame==1.9.6
+pystockfish==1.0.1
+six==1.13.0

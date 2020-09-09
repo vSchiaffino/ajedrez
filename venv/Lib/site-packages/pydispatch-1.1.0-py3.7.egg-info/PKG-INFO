@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: pydispatch
+Version: 1.1.0
+Summary: Simple Python message dispatcher
+Home-page: http://github.com/feedmagnet/pydispatch
+Author: Luke Sneeringer
+Author-email: luke@sneeringer.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Topic :: Software Development
+Provides: dispatch
