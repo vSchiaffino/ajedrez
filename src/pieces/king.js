@@ -16,6 +16,6 @@ export default class King extends Piece {
   }
 
   toString() {
-    return this.color === 'black' ? '♔' : '♚'
+    return this.color === 'white' ? '♔' : '♚'
   }
 }

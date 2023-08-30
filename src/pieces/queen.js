@@ -8,6 +8,6 @@ export default class Queen extends Piece {
   }
 
   toString() {
-    return this.color === 'black' ? '♕' : '♛'
+    return this.color === 'white' ? '♕' : '♛'
   }
 }
