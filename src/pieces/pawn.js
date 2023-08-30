@@ -20,6 +20,6 @@ export default class Pawn extends Piece {
   }
 
   toString() {
-    return this.color === 'white' ? '♙' : '♟'
+    return this.color === 'black' ? '♙' : '♟'
   }
 }

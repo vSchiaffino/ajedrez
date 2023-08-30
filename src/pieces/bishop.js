@@ -14,6 +14,6 @@ export default class Bishop extends Piece {
   }
 
   toString() {
-    return this.color === 'white' ? '♗' : '♝'
+    return this.color === 'black' ? '♗' : '♝'
   }
 }
