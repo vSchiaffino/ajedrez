@@ -1,0 +1,39 @@
+html {
+  background-color: #777;
+}
+
+table {
+  cursor: pointer;
+  border-spacing: 0;
+}
+
+td {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilo para las casillas pares */
+.white {
+  background-color: #edd6b0;
+}
+
+/* Estilo para las casillas impares */
+.black {
+  background-color: #b88762;
+}
+
+td.next-move::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 40%;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}

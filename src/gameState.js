@@ -19,4 +19,12 @@ export default class GameState {
     }
     this.state = mapStateChange[this.state]
   }
+
+  isTurnOf(color) {
+    const mapColorToState = {
+      white: 'whiteToPlay',
+      black: 'blackToPlay',
+    }
+    return this.state === mapColorToState[color]
+  }
 }
