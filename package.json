@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand ",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "web": "serve src"
   },
   "type": "module",
   "author": "",
@@ -16,6 +17,7 @@
     "jest": "^29.6.4"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "serve": "^14.2.1"
   }
 }
