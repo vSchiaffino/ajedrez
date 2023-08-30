@@ -17,4 +17,11 @@ export default class Piece {
   getColor() {
     return this.color
   }
+
+  move(from, to) {
+    console.log(`moving ${from.getNotation()} to ${to.getNotation()}`)
+    // No se si va asi, lo puse por ahora
+    from.setPiece(null)
+    to.setPiece(this)
+  }
 }

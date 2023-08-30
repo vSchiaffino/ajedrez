@@ -77,7 +77,7 @@ export default class Board extends Object {
     return row === undefined ? undefined : row[x + dx]
   }
 
-  getPieceIn(squareNotation) {
+  transformNotation(notation) {
     const mapColumnNotation = {
       A: 0,
       B: 1,
@@ -88,18 +88,24 @@ export default class Board extends Object {
       G: 6,
       H: 7,
     }
-    const row = Number(squareNotation[1]) - 1
-    const column = mapColumnNotation[squareNotation[0]]
+    if (notation.length !== 2) throw new Error('Invalid notation')
+
+    const row = Number(notation[1]) - 1
+
+    if (isNaN(row)) throw new Error('Invalid notation')
+    if (!(notation[0] in mapColumnNotation)) throw new Error('Invalid notation')
+
+    const column = mapColumnNotation[notation[0]]
+    return [row, column]
+  }
+
+  getPieceIn(squareNotation) {
+    const [row, column] = this.transformNotation(squareNotation)
     return this.grid[row][column].piece
   }
+
+  getSquareByNotation(squareNotation) {
+    const [row, column] = this.transformNotation(squareNotation)
+    return this.grid[row][column]
+  }
 }
-
-const board = new Board()
-
-board.grid[2][0].setPiece(new Pawn('black'))
-board.grid[2][2].setPiece(new Pawn('black'))
-console.log(board.toString())
-const knight = board.getPieceIn('B1')
-
-const possibleSquares = knight.getPossibleNextSquares(board, board.grid[0][1])
-console.log(possibleSquares.map((square) => square.getNotation()))

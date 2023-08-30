@@ -29,6 +29,14 @@ export default class Square {
     return this.getPieceColor() === pieceColor
   }
 
+  containsEnemyPiece(pieceColor) {
+    return this.isOccupied() && this.getPieceColor() !== pieceColor
+  }
+
+  isOccupied() {
+    return this.piece !== null
+  }
+
   getNotation() {
     const mapColumnNotation = {
       0: 'A',
