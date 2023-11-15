@@ -1,6 +1,6 @@
 export default class Square {
   constructor(x, y) {
-    this.piece = null
+    this.piece = NullPiece()
     this.x = x
     this.y = y
   }
@@ -18,11 +18,11 @@ export default class Square {
   }
 
   toString() {
-    return this.piece ? this.piece.toString() : ' '
+    return this.piece.toString()
   }
 
   getPieceColor() {
-    return this.piece ? this.piece.getColor() : undefined
+    return this.piece.getColor()
   }
 
   containsAllyPiece(pieceColor) {
@@ -34,7 +34,7 @@ export default class Square {
   }
 
   isOccupied() {
-    return this.piece !== null
+    return !this.piece.isNull()
   }
 
   getNotation() {

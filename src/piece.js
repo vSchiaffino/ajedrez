@@ -1,7 +1,21 @@
+export class NullPiece {
+  isNull() {
+    return true
+  }
+
+  getColor() {
+    return undefined
+  }
+}
+
 export default class Piece {
   constructor(color, movements) {
     this.color = color
     this.movements = movements
+  }
+
+  isNull() {
+    return false
   }
 
   getPossibleNextSquares(board, actualSquare) {
